@@ -1,24 +1,25 @@
 # TryHackMe - Linux Privilege Escalation Writeups
+**Room:** TryHackMe Linux Privesc | **Date:** 05/07/2026
 
-ملفات مختصرة لكل تقنيات الـ Privesc اللي غطيناها في روم TryHackMe.
+Short notes for every Privesc technique covered in the TryHackMe room.
 
 ## Files
 
 ### Sudo Exploits
-[فتح Sudo.md](Sudo.md)  
+[View Sudo.md](Sudo.md)  
 Shell escape, LD_PRELOAD, Apache2 file read
 
 ### Crontab Exploits  
-[فتح Crontab.md](Crontab.md)  
+[View Crontab.md](Crontab.md)  
 Wildcard abuse with cron jobs
 
 ### SUID Exploits
-[فتح SUID.md](SUID.md)  
+[View SUID.md](SUID.md)  
 PATH hijack, .so hijack, Bash injection
 
 ### Passwords & Keys
-[فتح Passwords.md](Passwords.md)  
+[View Passwords.md](Passwords.md)  
 History, config files, SSH keys
 
 ---
-**Note:** كل الأوامر مجربة على THM Linux Privesc Room
+**Note:** All commands are tested on TryHackMe Linux Privesc Room. Use for learning and authorized testing only.
